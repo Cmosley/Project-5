@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <!-- <img src="/app/base/static/assets/images/logo-gif.gif" alt="safe zone gif" />  -->
+                    <!-- <video autoplay="autoplay" loop="loop" width="400" height="300"> 
+                        <source src="/app/base/static/assets/images/logo-video.mp4" type="video/mp4" />  -->
+                                           <center>   <img src="{{ url_for('static', filename='assets/images/logo-gif.gif') }}"  /></center>
+ <!-- </video>  -->
+
+                        
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

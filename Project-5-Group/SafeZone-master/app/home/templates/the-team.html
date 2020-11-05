@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} The Team {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Meet the Team</h5>
+                            </div>
+                            <!-- <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="javascript:">The Team</a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <div class="main-body">
+                <div class="page-wrapper">
+                    <!-- [ Main Content ] start -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Christian Mosley</h5>
+                                </div>
+                                <div class="card-block">
+                                    <img class="rounded-circle" src="/static/assets/images/Christian.jfif" style="width:150px; height:150px;"> Christian comes from a Business Management and Finance background and plans to use his data science skillset to help businesses solve real-world problems.
+                                </div>
+                                <div class="card-header">
+                                    <h5>Erik Kim </h5>
+                                </div>
+                                <div class="card-block">
+                                    <img class="rounded-circle" src="/static/assets/images/erik.jpg" style="width:150px; height:150px;"> Erik is a data scientist with a background in Finance, Economics and Entrepreneurship. He is interested in solving problems using data and applying business-minded questions for practical applicability.
+                                </div>
+                                <div class="card-header">
+                                    <h5>Greg Niss</h5>
+                                </div>
+                                <div class="card-block">
+                                    <img class="rounded-circle" src="/static/assets/images/Greg.png" style="width:150px; height:150px;">Greg brings a research analyst and executive recruiting background to his Data Scientist role at SafeZone. Prior to SafeZone, Greg worked with clients in the investment management industry. He is looking forward to working with the team to raise seed money for a potential product launch. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ Main Content ] end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

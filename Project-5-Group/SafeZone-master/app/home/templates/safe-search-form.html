@@ -1,0 +1,100 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Safe Search {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Safe Search</h5>
+                        </div>
+                        <!-- <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Maps</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">Google Maps</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- [ Main Content ] start -->
+                <div class="row">
+                    <!-- [ Safe Search ] start -->
+                    <div class="col-lg-12 col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Is your State safe?</h5>
+                                <span class="d-block m-t-5">Type in the name of your State to see disaster and COVID related data</span>
+                            </div>
+                            <div class="card-block">
+                                <form action="/state_result" method="post">
+                                    <div class="input-group input-group-button mb-3">
+                                        <input type="text" id="state" name="state" class="form-control" placeholder="Write your state here">
+                                        <span class="input-group-addon" id="basic-addon1">
+                                      <button name='state_search' class="btn btn-primary m-0">Search</button>
+                                      </span>
+                                    </div>
+                                </form>
+                                {% if data =="TRUE" %}
+                                <div id="mapGeo" class="set-map" style="height:400px;">
+                                     {{n_data.state}} currently has the following disasters:
+                                    <br><br>
+                                     Hurricane:&nbsp {{bol_data.hur}} <br>
+                                     Flood:&nbsp {{bol_data.flood}} <br>
+                                     Tornado:&nbsp {{bol_data.torn}} <br>
+                                     Wild Fire:&nbsp {{bol_data.wildfire}} <br>                                   
+                                     Power Outage:&nbsp {{bol_data.power}} <br>
+                                    <br><br>
+                                    {{n_data.state}} COVID-19 Test Positivity:
+                                    <br><br>
+                                     Current Rates:&nbsp {{n_data.week}} <br>
+                                     1 Month Prediction:&nbsp {{n_data.month}} <br>
+                                     2 Month Prediction:&nbsp {{n_data.month2}} <br>
+
+                                    
+
+
+                                </div>
+                                {% else %}
+                                
+                                {% endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ Main Content ] end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- State dict -->
+<!-- state_dict = {California: "CA", Louisiana: "LA", Texas: "TX", New York: "NY", Kansas: "KS"} -->
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <!-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="/static/assets/plugins/google-maps/js/gmaps.js"></script>
+    <script src="/static/assets/js/pages/google-maps.js"></script> -->
+
+{% endblock javascripts %}
